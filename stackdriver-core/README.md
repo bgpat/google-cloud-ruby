@@ -41,7 +41,7 @@ for more information.
 ## License
 
 This library is licensed under Apache 2.0. Full license text is available in
-[LICENSE](https://googleapis.github.io/google-cloud-ruby/docs/stackdriver-core/latest/file.LICENSE).
+[LICENSE](./LICENSE.md).
 
 ## Support
 

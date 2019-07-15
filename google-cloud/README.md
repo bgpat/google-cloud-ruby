@@ -14,36 +14,36 @@ individual google-cloud-* gems that you need.
 
 This gem depends on and lazily loads the following google-cloud-* gems:
 
-- [google-cloud-asset](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-asset)
-- [google-cloud-bigquery](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-bigquery)
-- [google-cloud-bigquery-data_transfer](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-bigquery-data_transfer)
-- [google-cloud-bigtable](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-bigtable)
-- [google-cloud-container](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-container)
-- [google-cloud-dataproc](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-dataproc)
-- [google-cloud-datastore](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-datastore)
-- [google-cloud-dialogflow](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-dialogflow)
-- [google-cloud-dlp](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-dlp)
-- [google-cloud-dns](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-dns)
-- [google-cloud-error_reporting](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-error_reporting)
-- [google-cloud-firestore](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-firestore)
-- [google-cloud-kms](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-kms)
-- [google-cloud-language](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-language)
-- [google-cloud-logging](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-logging)
-- [google-cloud-monitoring](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-monitoring)
-- [google-cloud-os_login](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-os_login)
-- [google-cloud-pubsub](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-pubsub)
-- [google-cloud-redis](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-redis)
-- [google-cloud-resource_manager](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-resource_manager)
-- [google-cloud-scheduler](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-scheduler)
-- [google-cloud-spanner](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-spanner)
-- [google-cloud-speech](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-speech)
-- [google-cloud-storage](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-storage)
-- [google-cloud-tasks](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-tasks)
-- [google-cloud-text_to_speech](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-text_to_speech)
-- [google-cloud-trace](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-trace)
-- [google-cloud-translate](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-translate)
-- [google-cloud-video_intelligence](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-video_intelligence)
-- [google-cloud-vision](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-vision)
+- [google-cloud-asset](https://googleapis.dev/ruby/google-cloud-asset/latest
+- [google-cloud-bigquery](https://googleapis.dev/ruby/google-cloud-bigquery/latest
+- [google-cloud-bigquery-data_transfer](https://googleapis.dev/ruby/google-cloud-bigquery-data_transfer/latest
+- [google-cloud-bigtable](https://googleapis.dev/ruby/google-cloud-bigtable/latest
+- [google-cloud-container](https://googleapis.dev/ruby/google-cloud-container/latest
+- [google-cloud-dataproc](https://googleapis.dev/ruby/google-cloud-dataproc/latest
+- [google-cloud-datastore](https://googleapis.dev/ruby/google-cloud-datastore/latest
+- [google-cloud-dialogflow](https://googleapis.dev/ruby/google-cloud-dialogflow/latest
+- [google-cloud-dlp](https://googleapis.dev/ruby/google-cloud-dlp/latest
+- [google-cloud-dns](https://googleapis.dev/ruby/google-cloud-dns/latest
+- [google-cloud-error_reporting](https://googleapis.dev/ruby/google-cloud-error_reporting/latest
+- [google-cloud-firestore](https://googleapis.dev/ruby/google-cloud-firestore/latest
+- [google-cloud-kms](https://googleapis.dev/ruby/google-cloud-kms/latest
+- [google-cloud-language](https://googleapis.dev/ruby/google-cloud-language/latest
+- [google-cloud-logging](https://googleapis.dev/ruby/google-cloud-logging/latest
+- [google-cloud-monitoring](https://googleapis.dev/ruby/google-cloud-monitoring/latest
+- [google-cloud-os_login](https://googleapis.dev/ruby/google-cloud-os_login/latest
+- [google-cloud-pubsub](https://googleapis.dev/ruby/google-cloud-pubsub/latest
+- [google-cloud-redis](https://googleapis.dev/ruby/google-cloud-redis/latest
+- [google-cloud-resource_manager](https://googleapis.dev/ruby/google-cloud-resource_manager/latest
+- [google-cloud-scheduler](https://googleapis.dev/ruby/google-cloud-scheduler/latest
+- [google-cloud-spanner](https://googleapis.dev/ruby/google-cloud-spanner/latest
+- [google-cloud-speech](https://googleapis.dev/ruby/google-cloud-speech/latest
+- [google-cloud-storage](https://googleapis.dev/ruby/google-cloud-storage/latest
+- [google-cloud-tasks](https://googleapis.dev/ruby/google-cloud-tasks/latest
+- [google-cloud-text_to_speech](https://googleapis.dev/ruby/google-cloud-text_to_speech/latest
+- [google-cloud-trace](https://googleapis.dev/ruby/google-cloud-trace/latest
+- [google-cloud-translate](https://googleapis.dev/ruby/google-cloud-translate/latest
+- [google-cloud-video_intelligence](https://googleapis.dev/ruby/google-cloud-video_intelligence/latest
+- [google-cloud-vision](https://googleapis.dev/ruby/google-cloud-vision/latest
 
 ## Quick Start
 
@@ -114,7 +114,7 @@ for more information.
 ## License
 
 This library is licensed under Apache 2.0. Full license text is available in
-[LICENSE](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud/latest/file.LICENSE).
+[LICENSE](./LICENSE.md).
 
 ## Support
 
