@@ -5,7 +5,7 @@ libraries. Please see the [GitHub
 repository](https://github.com/googleapis/google-cloud-ruby) for more
 information about the individual google-cloud gems.
 
-- [stackdriver-core API documentation](https://googleapis.github.io/google-cloud-ruby/docs/stackdriver-core/latest)
+- [stackdriver-core API documentation](https://googleapis.dev/ruby/docs/stackdriver-core/latest)
 
 ## Supported Ruby Versions
 
@@ -30,12 +30,12 @@ change at any time and the public API should not be considered stable.
 Contributions to this library are always welcome and highly encouraged.
 
 See the [Contributing
-Guide](https://googleapis.github.io/google-cloud-ruby/docs/stackdriver-core/latest/file.CONTRIBUTING)
+Guide](./CONTRIBUTING.md)
 for more information on how to get started.
 
 Please note that this project is released with a Contributor Code of Conduct. By
 participating in this project you agree to abide by its terms. See [Code of
-Conduct](https://googleapis.github.io/google-cloud-ruby/docs/stackdriver-core/latest/file.CODE_OF_CONDUCT)
+Conduct](./CODE_OF_CONDUCT.md)
 for more information.
 
 ## License

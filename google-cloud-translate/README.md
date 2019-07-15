@@ -4,7 +4,7 @@
 
 Translation API supports more than one hundred different languages, from Afrikaans to Zulu. Used in combination, this enables translation between thousands of language pairs. Also, you can send in HTML and receive HTML with translated text back. You don't need to extract your source text or reassemble the translated content.
 
-- [google-cloud-translate API documentation](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-translate/latest)
+- [google-cloud-translate API documentation](https://googleapis.dev/ruby/docs/google-cloud-translate/latest)
 - [google-cloud-translate on RubyGems](https://rubygems.org/gems/google-cloud-translate)
 - [Google Cloud Translation API documentation](https://cloud.google.com/translation/docs)
 
@@ -21,7 +21,7 @@ authentication using a project ID and OAuth 2.0 credentials. In addition,
 it supports authentication using a public API access key. (If both the API
 key and the project and OAuth 2.0 credentials are provided, the API key
 will be used.) Instructions and configuration options are covered in the
-[Authentication Guide](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-translate/latest/file.AUTHENTICATION).
+[Authentication Guide](./AUTHENTICATION.md).
 
 ## Example
 
@@ -82,12 +82,12 @@ This library follows [Semantic Versioning](http://semver.org/).
 Contributions to this library are always welcome and highly encouraged.
 
 See the [Contributing
-Guide](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-translate/latest/file.CONTRIBUTING)
+Guide](./CONTRIBUTING.md)
 for more information on how to get started.
 
 Please note that this project is released with a Contributor Code of Conduct. By
 participating in this project you agree to abide by its terms. See [Code of
-Conduct](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-translate/latest/file.CODE_OF_CONDUCT)
+Conduct](./CODE_OF_CONDUCT.md)
 for more information.
 
 ## License

@@ -28,11 +28,7 @@ function set_failed_status {
     EXIT_STATUS=1
 }
 
-if [ "$PACKAGE" = "post" ]; then
-    export DOCS_CREDENTIALS=${KOKORO_KEYSTORE_DIR}/73713_docuploader_service_account
-    python3 -m pip install gcp-docuploader
-    (bundle update && bundle exec rake kokoro:post) || set_failed_status
-elif [ "$JOB_TYPE" = "nightly" ]; then
+if [ "$JOB_TYPE" = "nightly" ]; then
     for version in "${versions[@]}"; do
         rbenv global "$version"
         (bundle update && bundle exec rake kokoro:nightly) || set_failed_status
@@ -44,6 +40,7 @@ elif [ "$JOB_TYPE" = "continuous" ]; then
         (bundle update && bundle exec rake kokoro:continuous) || set_failed_status
     done
 elif [ "$JOB_TYPE" = "release" ]; then
+    export DOCS_CREDENTIALS=${KOKORO_KEYSTORE_DIR}/73713_docuploader_service_account
     git fetch --depth=10000
     python3 -m pip install git+https://github.com/googleapis/releasetool
     python3 -m releasetool publish-reporter-script > /tmp/publisher-script; source /tmp/publisher-script

@@ -206,29 +206,29 @@ task :rubocop, :bundleupdate do |t, args|
   end
 end
 
-require_relative "rakelib/yard_builder.rb"
+require_relative "rakelib/devsite_builder.rb"
 
 namespace :docs do
   desc "Builds documentation for all gems on current branch (assumes master)"
   task :build_master do
-    YardBuilder.new(__dir__).build_master
+    DevsiteBuilder.new(__dir__).build_master
   end
 
   desc "Add release and builds documentation for a tag"
   task :publish_tag, [:tag] do |t, args|
     tag = extract_args args, :tag
-    YardBuilder.new(__dir__).publish_tag(tag)
+    DevsiteBuilder.new(__dir__).publish_tag(tag)
   end
 
   desc "Rebuilds documentation for a tag"
   task :rebuild_tag, [:tag] do |t, args|
     tag = extract_args args, :tag
-    YardBuilder.new(__dir__).rebuild_tag(tag)
+    DevsiteBuilder.new(__dir__).rebuild_tag(tag)
   end
 
   desc "Builds documentation for all tags and current branch (assumes master)"
   task :rebuild_all do
-    YardBuilder.new(__dir__).rebuild_all
+    DevsiteBuilder.new(__dir__).rebuild_all
   end
 end
 
@@ -605,8 +605,6 @@ namespace :kokoro do
   end
 
   task :release do
-    require_relative "rakelib/devsite_builder.rb"
-
     version = "0.1.0"
     header_2 ENV["JOB_TYPE"]
     Dir.chdir ENV["PACKAGE"] do
@@ -620,21 +618,7 @@ namespace :kokoro do
     end
     Rake::Task["kokoro:load_env_vars"].invoke
     tag = "#{ENV["PACKAGE"]}/v#{version}"
-    DevsiteBuilder.new(__dir__).publish_tag tag
     Rake::Task["release"].invoke tag
-  end
-
-  desc "Runs post-build logic on kokoro."
-  task :post do
-    require_relative "rakelib/devsite_builder.rb"
-
-    Rake::Task["kokoro:load_env_vars"].invoke
-
-    # Temporary, change to build_master
-    DevsiteBuilder.new(__dir__).republish_all
-    Rake::Task["docs:build_master"].invoke
-
-    Rake::Task["test:codecov"].invoke
   end
 
   task :load_env_vars do
@@ -709,16 +693,6 @@ def generate_kokoro_configs
       config = ERB.new File.read("./.kokoro/templates/release.cfg.erb")
       f.write config.result(binding)
     end
-  end
-
-  # generate post-build config
-  gem = "post"
-  os_version = :linux
-  File.open "./.kokoro/continuous/linux/#{gem}.cfg", "w" do |f|
-    base = ERB.new File.read("./.kokoro/templates/linux.cfg.erb")
-    base = base.result binding
-    config = ERB.new File.read("./.kokoro/templates/post.cfg.erb")
-    f.write config.result(binding)
   end
 end
 

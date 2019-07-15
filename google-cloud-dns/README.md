@@ -2,7 +2,7 @@
 
 [Google Cloud DNS](https://cloud.google.com/dns/) ([docs](https://cloud.google.com/dns/docs)) is a high-performance, resilient, global DNS service that provides a cost-effective way to make your applications and services available to your users. This programmable, authoritative DNS service can be used to easily publish and manage DNS records using the same infrastructure relied upon by Google. To learn more, read [What is Google Cloud DNS?](https://cloud.google.com/dns/what-is-cloud-dns).
 
-- [google-cloud-dns API documentation](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-dns/latest)
+- [google-cloud-dns API documentation](https://googleapis.dev/ruby/docs/google-cloud-dns/latest)
 - [google-cloud-dns on RubyGems](https://rubygems.org/gems/google-cloud-dns)
 - [Google Cloud DNS documentation](https://cloud.google.com/dns/docs)
 
@@ -16,7 +16,7 @@ $ gem install google-cloud-dns
 
 This library uses Service Account credentials to connect to Google Cloud services. When running on Compute Engine the credentials will be discovered automatically. When running on other environments the Service Account credentials can be specified by providing the path to the JSON file, or the JSON itself, in environment variables.
 
-Instructions and configuration options are covered in the [Authentication Guide](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-dns/latest/file.AUTHENTICATION).
+Instructions and configuration options are covered in the [Authentication Guide](./AUTHENTICATION.md).
 
 ## Example
 
@@ -81,12 +81,12 @@ change at any time and the public API should not be considered stable.
 Contributions to this library are always welcome and highly encouraged.
 
 See the [Contributing
-Guide](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-dns/latest/file.CONTRIBUTING)
+Guide](./CONTRIBUTING.md)
 for more information on how to get started.
 
 Please note that this project is released with a Contributor Code of Conduct. By
 participating in this project you agree to abide by its terms. See [Code of
-Conduct](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-dns/latest/file.CODE_OF_CONDUCT)
+Conduct](./CODE_OF_CONDUCT.md)
 for more information.
 
 ## License

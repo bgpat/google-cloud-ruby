@@ -9,7 +9,7 @@ programmatically manage  container resources such as Organizations and Projects,
 * Delete projects
 * Undelete, or recover, projects that you don't want to delete
 
-- [google-cloud-resource_manager API documentation](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-resource_manager/latest)
+- [google-cloud-resource_manager API documentation](https://googleapis.dev/ruby/docs/google-cloud-resource_manager/latest)
 - [google-cloud-resource_manager on RubyGems](https://rubygems.org/gems/google-cloud-resource_manager)
 - [Google Cloud Resource Manager documentation](https://cloud.google.com/resource-manager/)
 
@@ -36,7 +36,7 @@ Also make sure all environment variables are cleared of any
 service account credentials. Then google-cloud-resource_manager will be able to detect the user
 authentication and connect with those credentials.
 
-Instructions and configuration options are covered in the [Authentication Guide](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-resource_manager/latest/file.AUTHENTICATION).
+Instructions and configuration options are covered in the [Authentication Guide](./AUTHENTICATION.md).
 
 ## Example
 
@@ -101,12 +101,12 @@ change at any time and the public API should not be considered stable.
 Contributions to this library are always welcome and highly encouraged.
 
 See the [Contributing
-Guide](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-resource_manager/latest/file.CONTRIBUTING)
+Guide](./CONTRIBUTING.md)
 for more information on how to get started.
 
 Please note that this project is released with a Contributor Code of Conduct. By
 participating in this project you agree to abide by its terms. See [Code of
-Conduct](https://googleapis.github.io/google-cloud-ruby/docs/google-cloud-resource_manager/latest/file.CODE_OF_CONDUCT)
+Conduct](./CODE_OF_CONDUCT.md)
 for more information.
 
 ## License

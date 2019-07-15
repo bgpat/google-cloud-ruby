@@ -13,7 +13,7 @@ recommended during development.
 
 General instructions, environment variables, and configuration options are
 covered in the general [Authentication
-guide](https://googleapis.github.io/google-cloud-ruby/docs/authentication)
+guide](google-cloud/AUTHENTICATION.md)
 for the `google-cloud` umbrella package. Specific instructions and environment
 variables for each individual service are linked from the README documents
 listed below for each service.
@@ -22,8 +22,8 @@ listed below for each service.
 
 Google Cloud requires a **Project ID** and **Service Account Credentials** to
 connect to the APIs. For detailed instructions on how to create a service
-account, see the [Authentication
-guide](docs/google-cloud/v0.12.2/guides/authentication#onyourownserver).
+account, see the [Service Account
+Guide](https://cloud.google.com/iam/docs/creating-managing-service-accounts).
 
 You will use the **Project ID** and **JSON key file** to connect to most
 services with google-cloud-ruby.
