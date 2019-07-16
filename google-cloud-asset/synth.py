@@ -208,6 +208,18 @@ for version in ['v1', 'v1beta1']:
         'Google::Cloud::Asset::VERSION'
     )
 
+# Fix links for devsite migration
+s.replace(
+    '**/*',
+   'https://googleapis.github.io/google-cloud-ruby/#/docs/google-cloud/master/guides/authentication',
+   'https://github.com/googleapis/google-cloud-ruby/blob/master/google-cloud/AUTHENTICATION.md'
+)
+s.replace(
+    '**/*',
+    'https://googleapis.github.io/google-cloud-ruby/#/docs/google-cloud-logging/latest/google/cloud/logging/logger',
+    'https://googleapis.dev/ruby/google-cloud-logging/latest'
+)
+
 
 # Generate the helper methods
 call('bundle update && bundle exec rake generate', shell=True)
