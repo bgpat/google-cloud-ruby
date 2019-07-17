@@ -209,17 +209,27 @@ for version in ['v1', 'v1beta1']:
     )
 
 # Fix links for devsite migration
+for file in ['lib/**/*.rb', '*.md']:
+    s.replace(
+        file,
+        'https://googleapis.github.io/google-cloud-ruby/#/docs/google-cloud-logging/latest/google/cloud/logging/logger',
+        'https://googleapis.dev/ruby/google-cloud-logging/latest'
+    )
 s.replace(
-    '**/*',
-   'https://googleapis.github.io/google-cloud-ruby/#/docs/google-cloud/master/guides/authentication',
-   'https://github.com/googleapis/google-cloud-ruby/blob/master/google-cloud/AUTHENTICATION.md'
+    '*.md',
+    'https://googleapis.github.io/google-cloud-ruby/#/docs/.*/authentication',
+    './AUTHENTICATION.md'
 )
 s.replace(
-    '**/*',
-    'https://googleapis.github.io/google-cloud-ruby/#/docs/google-cloud-logging/latest/google/cloud/logging/logger',
-    'https://googleapis.dev/ruby/google-cloud-logging/latest'
+    'lib/**/*.rb',
+    'https://googleapis.github.io/google-cloud-ruby/#/docs/.*/authentication',
+    'https://googleapis.dev/ruby/google-cloud-asset/latest/file.AUTHENTICATION.html'
 )
-
+s.replace(
+    'README.md',
+    'github.io/google-cloud-ruby/#/docs/google-cloud-asset/latest/.*$',
+    'dev/ruby/google-cloud-asset/latest'
+)
 
 # Generate the helper methods
 call('bundle update && bundle exec rake generate', shell=True)

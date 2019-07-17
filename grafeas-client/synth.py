@@ -141,6 +141,13 @@ s.replace(
     '\n  gem\\.add_dependency "google-gax", "~> 1\\.[\\d\\.]+"\n',
     '\n  gem.add_dependency "google-gax", "~> 1.7"\n')
 
+# Fix for tests that assume protos implement to_hash
+s.replace(
+    'test/grafeas/v1/grafeas_client_test.rb',
+    'assert_equal\\(notes, request\\.notes\\)',
+    'assert_equal(notes, request.notes.to_h)'
+)
+
 # https://github.com/googleapis/gapic-generator/issues/2196
 s.replace(
     [
@@ -232,4 +239,27 @@ s.replace(
     'lib/grafeas/v1/*_client.rb',
     'Gem.loaded_specs\[.*\]\.version\.version',
     'Grafeas::VERSION'
+)
+
+# Fix links for devsite migration
+for file in ['lib/**/*.rb', '*.md']:
+    s.replace(
+        file,
+        'https://googleapis.github.io/google-cloud-ruby/#/docs/google-cloud-logging/latest/google/cloud/logging/logger',
+        'https://googleapis.dev/ruby/google-cloud-logging/latest'
+    )
+s.replace(
+    '*.md',
+    'https://googleapis.github.io/google-cloud-ruby/#/docs/.*/authentication',
+    './AUTHENTICATION.md'
+)
+s.replace(
+    'lib/**/*.rb',
+    'https://googleapis.github.io/google-cloud-ruby/#/docs/.*/authentication',
+    'https://googleapis.dev/ruby/grafeas-client/latest/file.AUTHENTICATION.html'
+)
+s.replace(
+    'README.md',
+    'github.io/google-cloud-ruby/#/docs/grafeas/latest/.*$',
+    'dev/ruby/grafeas/latest'
 )

@@ -137,6 +137,18 @@ s.replace(
     ],
     '/bigtable-admin\\.googleapis\\.com', '/bigtableadmin.googleapis.com')
 
+# Fix for tests that assume protos implement to_hash
+s.replace(
+    'test/google/cloud/bigtable/admin/v2/bigtable_instance_admin_client_test.rb',
+    'assert_equal\\(clusters, request\\.clusters\\)',
+    'assert_equal(clusters, request.clusters.to_h)'
+)
+s.replace(
+    'test/google/cloud/bigtable/admin/v2/bigtable_instance_admin_client_test.rb',
+    'assert_equal\\(labels, request\\.labels\\)',
+    'assert_equal(labels, request.labels.to_h)'
+)
+
 # https://github.com/googleapis/gapic-generator/issues/2232
 s.replace(
     [
@@ -206,4 +218,16 @@ s.replace(
     'lib/google/cloud/bigtable/v2/bigtable_client.rb',
     'Gem.loaded_specs\[.*\]\.version\.version',
     'Google::Cloud::Bigtable::VERSION'
+)
+
+# Fix links for devsite migration
+s.replace(
+    'lib/**/*.rb',
+    'https://googleapis.github.io/google-cloud-ruby/#/docs/google-cloud-logging/latest/google/cloud/logging/logger',
+    'https://googleapis.dev/ruby/google-cloud-logging/latest'
+)
+s.replace(
+    'lib/**/*.rb',
+    'https://googleapis.github.io/google-cloud-ruby/#/docs/.*/authentication',
+    'https://googleapis.dev/ruby/google-cloud-bigtable/latest/file.AUTHENTICATION.html'
 )

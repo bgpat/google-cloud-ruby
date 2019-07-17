@@ -97,6 +97,13 @@ s.replace(
     '\n  gem\\.add_dependency "google-gax", "~> 1\\.[\\d\\.]+"\n',
     '\n  gem.add_dependency "google-gax", "~> 1.7"\n')
 
+# Fix for tests that assume protos implement to_hash
+s.replace(
+    'test/google/cloud/container/v1*/cluster_manager_client_test.rb',
+    'assert_equal\\(resource_labels, request\\.resource_labels\\)',
+    'assert_equal(resource_labels, request.resource_labels.to_h)'
+)
+
 # https://github.com/googleapis/gapic-generator/issues/2196
 s.replace(
     [
@@ -183,3 +190,26 @@ for version in ['v1', 'v1beta1']:
         'Gem.loaded_specs\[.*\]\.version\.version',
         'Google::Cloud::Container::VERSION'
     )
+
+# Fix links for devsite migration
+for file in ['lib/**/*.rb', '*.md']:
+    s.replace(
+        file,
+        'https://googleapis.github.io/google-cloud-ruby/#/docs/google-cloud-logging/latest/google/cloud/logging/logger',
+        'https://googleapis.dev/ruby/google-cloud-logging/latest'
+    )
+s.replace(
+    '*.md',
+    'https://googleapis.github.io/google-cloud-ruby/#/docs/.*/authentication',
+    './AUTHENTICATION.md'
+)
+s.replace(
+    'lib/**/*.rb',
+    'https://googleapis.github.io/google-cloud-ruby/#/docs/.*/authentication',
+    'https://googleapis.dev/ruby/google-cloud-container/latest/file.AUTHENTICATION.html'
+)
+s.replace(
+    'README.md',
+    'github.io/google-cloud-ruby/#/docs/google-cloud-container/latest/.*$',
+    'dev/ruby/google-cloud-container/latest'
+)
